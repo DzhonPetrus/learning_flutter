@@ -32,22 +32,23 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController _usernameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   void _login() {
     var _username = _usernameController.text;
     var _password = _passwordController.text;
-    print('''
-    Username: $_username
-    Password: $_password
-    ''');
+
+    // print('''
+    // Username: $_username
+    // Password: $_password
+    // ''');
 
     if(_username == 'admin' && _password == 'password') {
       Navigator.push(
         context, 
         MaterialPageRoute(
-          builder: (context) => Dashboard(),
+          builder: (context) => const Dashboard(),
         )
       );
     }
