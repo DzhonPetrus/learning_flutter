@@ -58,7 +58,7 @@ class _DashboardState extends State<Dashboard> {
                       Navigator.push(
                         context, 
                         MaterialPageRoute(
-                          builder: (context) => const WordPair(),
+                          builder: (context) => const WordPairPage(),
                         )
                       );
                     },
