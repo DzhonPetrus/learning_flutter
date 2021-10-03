@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'counter.dart';
 import 'wordpair.dart';
+import 'jokes.dart';
 import 'components/drawer.dart';
 
 class Dashboard extends StatefulWidget {
@@ -67,6 +68,26 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ),
 
+                Container(
+                  width: MediaQuery.of(context).size.width / 2.2,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Colors.amber,
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const JokesPage(),
+                        )
+                      );
+                    },
+                    child: const Text('Jokes'),
+                  ),
+                ),
+
               ],
             ),
 
@@ -74,7 +95,7 @@ class _DashboardState extends State<Dashboard> {
           ],
         ),
       ),
-      drawer:  MyUserDrawer(),
+      drawer:  const MyUserDrawer(),
     );
   }
 }

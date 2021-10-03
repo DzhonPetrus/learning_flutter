@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
+            SizedBox(
               width:200,
               height:200,
               child: Image.asset('assets/JUAN_TEKNOLOHIYA.png')

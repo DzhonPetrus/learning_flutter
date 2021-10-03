@@ -20,35 +20,32 @@ class _MyUserDrawerState extends State<MyUserDrawer> {
         child: ListView(
           padding: const EdgeInsets.all(0),
           children: [
-            UserAccountsDrawerHeader(
+            const UserAccountsDrawerHeader(
               accountName: Text("John Peter Narzoles"),
               accountEmail: Text("dzhonpetrus@gmail.com"),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage('assets/developer.jpg')
               )
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.person),
               title: Text("Juan Pedro"),
               subtitle: Text("Developer"),
               // trailing: Icon(Icons.edit)
 
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.email),
               title: Text("Email"),
               subtitle: Text("dzhonpetrus@gmail.com"),
               // trailing: Icon(Icons.edit)
 
             ),
-            ListTile(),
-            ListTile(),
-            ListTile(),
-            ListTile(),
-            ListTile(),
+            const ListTile(),
+            const ListTile(),
             ListTile(
-              leading: Icon(Icons.logout),
-              title: Text("Logout"),
+              leading: const Icon(Icons.logout),
+              title: const Text("Logout"),
               onTap: _logout
             ),
           ],

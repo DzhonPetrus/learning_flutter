@@ -10,7 +10,7 @@ class WordPairPage extends StatefulWidget {
 
 class WordPairPageState extends State<WordPairPage> {
   final _randomWordPairs = <WordPair>[];
-  final _savedWordPairs = Set<WordPair>();
+  final _savedWordPairs = <WordPair>{};
 
   Widget _buildList () {
     return ListView.builder(
@@ -83,7 +83,7 @@ class WordPairPageState extends State<WordPairPage> {
       appBar:  AppBar(
         title: const Text('WordPair'),
         actions: <Widget>[
-          IconButton(onPressed: _pushSaved, icon: Icon(Icons.list))
+          IconButton(onPressed: _pushSaved, icon: const Icon(Icons.list))
         ],
         ),
       body: Center(
