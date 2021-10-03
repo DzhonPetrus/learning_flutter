@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'counter.dart';
 import 'wordpair.dart';
 import 'jokes.dart';
+import 'form.dart';
 import 'components/drawer.dart';
 
 class Dashboard extends StatefulWidget {
+  static const String routeName = "/dashboard";
   const Dashboard({Key? key}) : super(key: key);
 
   @override
@@ -85,6 +87,26 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     child: const Text('Jokes'),
+                  ),
+                ),
+
+                Container(
+                  width: MediaQuery.of(context).size.width / 2.2,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Colors.amber,
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const FormPage(),
+                        )
+                      );
+                    },
+                    child: const Text('Form'),
                   ),
                 ),
 

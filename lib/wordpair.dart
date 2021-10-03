@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 class WordPairPage extends StatefulWidget {
+  static const String routeName = "/wordpair";
   const WordPairPage({Key? key}) : super(key: key);
 
   @override

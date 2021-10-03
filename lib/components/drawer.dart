@@ -10,6 +10,7 @@ class MyUserDrawer extends StatefulWidget {
 class _MyUserDrawerState extends State<MyUserDrawer> {
 
   void _logout() {
+    // Navigator.popUntil(context, ModalRoute.withName('/login'));
     Navigator.pop(context);
     Navigator.pop(context);
   }

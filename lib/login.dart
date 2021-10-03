@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'dashboard.dart';
 
 class LoginPage extends StatefulWidget {
+  static const String routeName = "/login";
   const LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -17,18 +18,14 @@ class _LoginPageState extends State<LoginPage> {
     var _username = _usernameController.text;
     var _password = _passwordController.text;
 
-    // print('''
-    // Username: $_username
-    // Password: $_password
-    // ''');
-
     if(_username == 'admin' && _password == 'password') {
-      Navigator.push(
-        context, 
-        MaterialPageRoute(
-          builder: (context) => const Dashboard(),
-        )
-      );
+      // Navigator.push(
+      //   context, 
+      //   MaterialPageRoute(
+      //     builder: (context) => const Dashboard(),
+      //   )
+      // );
+      Navigator.pushNamed(context, Dashboard.routeName);
     }
   }
 

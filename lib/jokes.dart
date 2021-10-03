@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class JokesPage extends StatefulWidget {
+  static const String routeName = "/jokes";
   const JokesPage({Key? key}) : super(key: key);
 
   @override

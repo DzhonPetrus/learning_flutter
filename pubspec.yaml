@@ -67,6 +67,7 @@ flutter:
     - assets/JUAN_TEKNOLOHIYA.png
     - assets/developer.jpg
     - assets/developer2.png
+    - assets/form_bg.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
