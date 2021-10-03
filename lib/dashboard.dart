@@ -12,6 +12,11 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
 
+  void _logout() {
+    Navigator.pop(context);
+    Navigator.pop(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,6 +103,16 @@ class _DashboardState extends State<Dashboard> {
               subtitle: Text("dzhonpetrus@gmail.com"),
               // trailing: Icon(Icons.edit)
 
+            ),
+            ListTile(),
+            ListTile(),
+            ListTile(),
+            ListTile(),
+            ListTile(),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text("Logout"),
+              onTap: _logout
             ),
           ],
         )
