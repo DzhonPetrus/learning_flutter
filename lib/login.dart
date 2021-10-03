@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'dashboard.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
