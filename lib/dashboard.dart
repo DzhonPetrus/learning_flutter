@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'counter.dart';
 import 'wordpair.dart';
+import 'components/drawer.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -11,11 +12,6 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-
-  void _logout() {
-    Navigator.pop(context);
-    Navigator.pop(context);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -72,51 +68,13 @@ class _DashboardState extends State<Dashboard> {
                 ),
 
               ],
-
             ),
 
             
           ],
         ),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: const EdgeInsets.all(0),
-          children: [
-            UserAccountsDrawerHeader(
-              accountName: Text("John Peter Narzoles"),
-              accountEmail: Text("dzhonpetrus@gmail.com"),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/developer.jpg')
-              )
-            ),
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text("Juan Pedro"),
-              subtitle: Text("Developer"),
-              // trailing: Icon(Icons.edit)
-
-            ),
-            ListTile(
-              leading: Icon(Icons.email),
-              title: Text("Email"),
-              subtitle: Text("dzhonpetrus@gmail.com"),
-              // trailing: Icon(Icons.edit)
-
-            ),
-            ListTile(),
-            ListTile(),
-            ListTile(),
-            ListTile(),
-            ListTile(),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title: Text("Logout"),
-              onTap: _logout
-            ),
-          ],
-        )
-      ),
+      drawer:  MyUserDrawer(),
     );
   }
 }

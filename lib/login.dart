@@ -60,6 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                 cursorColor: Colors.black,
                 decoration: const InputDecoration(
                   hintText: 'Input Username',
+                  labelText: "Username",
                   border: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.black),
                   ),
@@ -85,6 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                 cursorColor: Colors.black,
                 decoration: const InputDecoration(
                   hintText: 'Input Password',
+                  labelText: "Password",
                   border: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.black),
                   ),
