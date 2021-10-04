@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'utils/constants.dart';
+
 class Counter extends StatefulWidget {
   static const String routeName = "/counter";
   const Counter({Key? key}) : super(key: key);
@@ -9,10 +11,22 @@ class Counter extends StatefulWidget {
 }
 
 class _CounterState extends State<Counter> {
-  int _heart = 0;
+  late int _heart;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _heart = Constants.prefs.getInt("counter") ?? 0 ;
+    Constants.prefs.setInt("counter", _heart);
+    Constants.prefs.remove("savedWordPairs");
+    print(Constants.prefs.get("savedWordPairs"));
+  }
 
   void _buttonPress() {
-    setState((){ _heart++; });
+    setState((){ 
+      Constants.prefs.setInt("counter", ++_heart);
+     });
   }
 
   @override

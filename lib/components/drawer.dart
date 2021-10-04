@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/utils/constants.dart';
+
+import '../login.dart';
 
 class MyUserDrawer extends StatefulWidget {
   const MyUserDrawer({Key? key}) : super(key: key);
@@ -10,9 +13,11 @@ class MyUserDrawer extends StatefulWidget {
 class _MyUserDrawerState extends State<MyUserDrawer> {
 
   void _logout() {
+    Constants.prefs.setBool("loggedIn", false);
+    Navigator.pushReplacementNamed(context, LoginPage.routeName);
     // Navigator.popUntil(context, ModalRoute.withName('/login'));
-    Navigator.pop(context);
-    Navigator.pop(context);
+    // Navigator.pop(context);
+    // Navigator.pop(context);
   }
 
   @override

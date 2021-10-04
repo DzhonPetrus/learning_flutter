@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'dashboard.dart';
+import 'utils/constants.dart';
 
 class LoginPage extends StatefulWidget {
   static const String routeName = "/login";
@@ -18,6 +19,7 @@ class _LoginPageState extends State<LoginPage> {
     var _username = _usernameController.text;
     var _password = _passwordController.text;
 
+
     if(_username == 'admin' && _password == 'password') {
       // Navigator.push(
       //   context, 
@@ -25,7 +27,8 @@ class _LoginPageState extends State<LoginPage> {
       //     builder: (context) => const Dashboard(),
       //   )
       // );
-      Navigator.pushNamed(context, Dashboard.routeName);
+      Constants.prefs.setBool("loggedIn", true);
+      Navigator.pushReplacementNamed(context, Dashboard.routeName);
     }
   }
 

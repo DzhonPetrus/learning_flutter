@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'counter.dart';
 import 'dashboard.dart';
 import 'form.dart';
 import 'jokes.dart';
 import 'login.dart';
+import 'utils/constants.dart';
 import 'wordpair.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Constants.prefs = await SharedPreferences.getInstance();
+
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'First Flutter App',
       theme: ThemeData(primarySwatch: Colors.amber),
-      home: const LoginPage(),
+      home: Constants.prefs.getBool("loggedIn") == true ? const Dashboard() : const LoginPage(),
       routes: {
         LoginPage.routeName: (context) => const LoginPage(),
         FormPage.routeName: (context) => const FormPage(),
