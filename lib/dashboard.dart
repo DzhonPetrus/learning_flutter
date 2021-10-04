@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'counter.dart';
+import 'location.dart';
 import 'wordpair.dart';
 import 'jokes.dart';
 import 'form.dart';
@@ -107,6 +108,26 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     child: const Text('Form'),
+                  ),
+                ),
+
+                Container(
+                  width: MediaQuery.of(context).size.width / 2.2,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Colors.amber,
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const LocationPage(),
+                        )
+                      );
+                    },
+                    child: const Text('Location'),
                   ),
                 ),
 
