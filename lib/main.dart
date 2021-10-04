@@ -16,7 +16,7 @@ Future main() async {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'First Flutter App',
+      title: 'Juan Teknolohiya First Flutter App',
       theme: ThemeData(primarySwatch: Colors.amber),
       home: Constants.prefs.getBool("loggedIn") == true ? const Dashboard() : const LoginPage(),
       routes: {

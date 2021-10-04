@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.learning_flutter">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="learning_flutter"
+        android:label="Juan_Teknolohiya"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
