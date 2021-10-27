@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Fooderlich/fooderlich_page.dart';
+import 'MovieIdea/movie_screen.dart';
 import 'RecipeCalculator/recipe_page.dart';
 import 'counter.dart';
 import 'location.dart';
@@ -130,6 +131,26 @@ class _DashboardState extends State<Dashboard> {
                       );
                     },
                     child: const Text('Location'),
+                  ),
+                ),
+
+                Container(
+                  width: MediaQuery.of(context).size.width / 2.2,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Colors.amber,
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const MovieIdeaScreen(),
+                        )
+                      );
+                    },
+                    child: const Text('Notion Movie Ideas'),
                   ),
                 ),
 
