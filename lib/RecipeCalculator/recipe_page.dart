@@ -5,41 +5,23 @@ import 'recipe.dart';
 import 'recipe_card.dart';
 import 'recipe_detail.dart';
 
-class RecipePage extends StatelessWidget {
-  const RecipePage({Key? key}) : super(key: key);
+class RecipePage extends StatefulWidget {
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Apprentice',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
-      ),
-      home: const MyHomePage(title: 'Recipe Calculator'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  final String title;
-
-  const MyHomePage({
+  const RecipePage({
     Key? key,
-    required this.title
   }) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<RecipePage> createState() => _RecipePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _RecipePageState extends State<RecipePage> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Recipe Calculator'),
       ),
       body: SafeArea(
         child: ListView.builder(
