@@ -137,7 +137,7 @@ class _DashboardState extends State<Dashboard> {
                   height: 50,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
-                    color: Colors.amber,
+                    color: Colors.grey[300],
                   ),
                   child: MaterialButton(
                     onPressed: () {
@@ -148,7 +148,7 @@ class _DashboardState extends State<Dashboard> {
                         )
                       );
                     },
-                    child: const Text('Location'),
+                    child: const Text('Recipe Calculator'),
                   ),
                 ),
 
