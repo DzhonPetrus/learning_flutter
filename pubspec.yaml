@@ -1,4 +1,4 @@
-name: learning_flutter
+name: JuanTeknolohiya
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -66,10 +66,7 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/JUAN_TEKNOLOHIYA.png
-    - assets/developer.jpg
-    - assets/developer2.png
-    - assets/form_bg.jpg
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

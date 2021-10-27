@@ -1,4 +1,4 @@
-# learning_flutter
+# JuanTeknolohiya
 
 A new Flutter project.
 

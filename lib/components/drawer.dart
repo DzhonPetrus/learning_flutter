@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learning_flutter/utils/constants.dart';
 
+import '../utils/constants.dart';
 import '../login.dart';
 
 class MyUserDrawer extends StatefulWidget {
