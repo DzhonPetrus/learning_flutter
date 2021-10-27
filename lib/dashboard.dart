@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'RecipeCalculator/recipe_page.dart';
 import 'counter.dart';
 import 'location.dart';
 import 'wordpair.dart';
@@ -124,6 +125,26 @@ class _DashboardState extends State<Dashboard> {
                         context, 
                         MaterialPageRoute(
                           builder: (context) => const LocationPage(),
+                        )
+                      );
+                    },
+                    child: const Text('Location'),
+                  ),
+                ),
+
+                Container(
+                  width: MediaQuery.of(context).size.width / 2.2,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Colors.amber,
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const RecipePage(),
                         )
                       );
                     },

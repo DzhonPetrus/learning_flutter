@@ -19,8 +19,6 @@ class _CounterState extends State<Counter> {
     super.initState();
     _heart = Constants.prefs.getInt("counter") ?? 0 ;
     Constants.prefs.setInt("counter", _heart);
-    Constants.prefs.remove("savedWordPairs");
-    print(Constants.prefs.get("savedWordPairs"));
   }
 
   void _buttonPress() {
