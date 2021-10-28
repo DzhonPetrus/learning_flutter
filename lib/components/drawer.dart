@@ -47,8 +47,7 @@ class _MyUserDrawerState extends State<MyUserDrawer> {
               // trailing: Icon(Icons.edit)
 
             ),
-            const ListTile(),
-            const ListTile(),
+            const SizedBox(height:325),
             ListTile(
               leading: const Icon(Icons.logout),
               title: const Text("Logout"),

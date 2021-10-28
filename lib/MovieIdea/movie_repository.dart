@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'failure_model.dart';
 import 'movie_model.dart';
@@ -17,12 +16,15 @@ class MovieRepository {
   }
 
   Future<List<Movie>> getMovies() async {
+    const NOTION_API_KEY='secret_9s3yX2I72QmtjedDPeRoGUrSBAfbsGiepSDbmNuY5jS';
+    const NOTION_DATABASE_ID='1bb09d4d2b7642bb922d344a2807bf0b';
+
     try{
-      final url = '${_baseURL}databases/${dotenv.env['NOTION_DATABASE_ID']}/query';
+      final url = '${_baseURL}databases/$NOTION_DATABASE_ID/query';
       final response = await _client.post(
         Uri.parse(url),
         headers: {
-          HttpHeaders.authorizationHeader: 'Bearer ${dotenv.env['NOTION_API_KEY']}',
+          HttpHeaders.authorizationHeader: 'Bearer $NOTION_API_KEY',
           'Notion-Version': '2021-08-16',
         },
       );

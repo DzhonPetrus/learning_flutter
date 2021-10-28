@@ -11,7 +11,11 @@ class _FooderlichPageState extends State<FooderlichPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Fooderlich'),),
+      appBar: AppBar(
+        title: Text('Fooderlich'),
+        backgroundColor: Colors.grey[600],
+      ),
+      body: SafeArea(child: Container()),
     );
   }
 }

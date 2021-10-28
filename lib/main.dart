@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'counter.dart';
@@ -11,7 +10,6 @@ import 'utils/constants.dart';
 import 'wordpair.dart';
 
 Future main() async {
-  await dotenv.load(fileName: '.env');
   WidgetsFlutterBinding.ensureInitialized();
   Constants.prefs = await SharedPreferences.getInstance();
 

@@ -27,8 +27,17 @@ class _LoginPageState extends State<LoginPage> {
       //     builder: (context) => const Dashboard(),
       //   )
       // );
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text("Logged In Success!"),
+        backgroundColor: Colors.green,
+        ));
       Constants.prefs.setBool("loggedIn", true);
       Navigator.pushReplacementNamed(context, Dashboard.routeName);
+    }else{
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text("Invalid Username or Password!"),
+        backgroundColor: Colors.red,
+        ));
     }
   }
 

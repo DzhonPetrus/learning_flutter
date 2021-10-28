@@ -21,6 +21,7 @@ class _RecipePageState extends State<RecipePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.grey[600],
         title: const Text('Recipe Calculator'),
       ),
       body: SafeArea(
